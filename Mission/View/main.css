@@ -1,0 +1,290 @@
+body, h1, h2, h3, p, ul, li, form, input {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	display: block;
+	list-style: none;
+}
+
+body {
+	display: block;
+	min-height: 100%;
+	top: 0px;
+	font-size: 13px;
+	color: #404040;
+	background: #f1f1f1;
+}
+
+
+
+/* h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+
+}
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+input, textarea {
+
+} */
+
+
+
+
+
+/* Layout */
+
+
+
+.header-container {
+	display: block;
+	min-width: 750px;
+	width: 100%;
+	height: 60px;
+	margin: auto;
+	background-color: #EDEDED;
+}
+
+.header {
+ 	display: flex;
+ 	position: relative;
+	width: 100%;
+	height: 60px;
+}
+
+.headerBox {
+	position: relative;
+	height: 60px;
+	line-height: 58px;
+	vertical-align: middle;
+}
+
+.headerLogoBox {
+	max-width: 244px;
+	min-width: 244px;
+
+	overflow: hidden;
+
+}
+
+.headerLogo {
+	flex: 0 0;
+	display: block;
+	position: absolute;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.headerLogoImg {
+	display: block;
+	width: 183px;
+	height: 39px;
+	background-image: url('http://www.gstatic.com/android/market_images/web/play_logo_x2.png');
+	background-size: 183px 39px;
+	background-repeat: no-repeat;
+}
+
+.headerOptionBox {
+	float: right;
+	flex: 1 1 auto;
+	display: flex;
+	order: 1;
+	min-width: 270px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: #0FF;
+}
+
+.headerSearchBox {
+	flex: 0 2 auto;
+	min-width: 200px;
+	width: 650px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.headerSearch {
+	height: 30px;
+	margin-top: 15px;
+}
+
+.headerSearchForm {
+	flex-flow: row wrap;
+	display: flex;
+	width: 100%;
+	height: 30px;
+}
+
+.headerSearchInput {
+	flex: 1;
+	display: list-item;
+	height: 100%;
+
+}
+
+.headerSearchButton {
+	display: list-item;
+	width: 100px;
+	height: 100%;
+}
+
+.wrapper {
+	background-color: #E5E5E5;
+}
+
+#actionBarContainer {
+	position: fixed;
+	display: block;
+	min-width: 964px;
+	width: 100%;
+	height: 48px;
+	margin: 0;
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 6px 0px;
+}
+
+#actionBar {
+	position: relative;
+	width: 100%;
+	height: 48px;
+	background-color: #FFF;
+}
+
+.actionBarItem {
+	display: inline-block;
+	position: absolute;
+	background-color: #0FF;
+}
+
+#actionBarOptionItem {
+	right: 30px;
+	width: 300px;
+	height: 48px;
+	background-color: #123;
+}
+
+.navContainer {
+	float: left;
+	position: fixed;
+	display: block;
+	z-index: 2;
+	width: 200px;
+	height: 350px;
+	background-color: rgba(245, 245, 245, 0.952941);
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 6px 0px;
+}
+
+.nav {
+	position: absolute;
+	width: 200px;
+	background-attachment: scroll;
+}
+
+.navListItem {
+	height: 48px;
+	background-color: #E5E5E5;
+}
+
+.navListItem.home {
+	background-color: #444444;
+}
+
+.navListItemLink {
+	display: flex;
+	flex-flow: row wrap;
+	overflow: hidden;
+	z-index: 3;
+	width: 200px!important;
+	height: 48px;
+}
+
+.navListItemLinkIcon {
+	width: 65px;
+	z-index: 4;
+}
+
+.navListItemLinkIcon.app {
+	background-color: #B3C833;
+}
+
+.navListItemLinkIcon.movie {
+	background-color: #CE5043;
+}
+
+.navListItemLinkIcon.book {
+	background-color: #1AA1E1;
+}
+
+.navListItemLinkIcon.device {
+	background-color: #658092;
+}
+
+.subNavContainer {
+
+}
+
+.subNav {
+	top: 240px;
+}
+
+.subNavItem {
+	display: block;
+	width: 200px;
+}
+
+
+#main {
+	width: 100%;
+	height: 1000px;
+
+}
+
+#footer {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
