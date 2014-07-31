@@ -4,6 +4,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Hello World</title>
+	<script type="text/javascript">
+		window.addEventListener('resize', reload);
+		function getWidth() {
+			var wid = document.getElementById("cardHolder01").clientWidth;
+
+			//document.getElementById("cardHolder01").innerHTML = wid;
+			return wid;
+		}
+
+		function reload() {
+
+			document.getElementById("cardHolder01").innerHTML = "";
+
+			for(i=0; i<Math.floor(getWidth()/160); i++) {
+				newCardContainer = document.createElement("div");
+				newCardContainer.className = "cardContainer";
+
+				newCard = document.createElement("div");
+				newCard.className = "card";
+				newCard.innerHTML = i + " content";
+
+				newCardContainer.appendChild(newCard);
+
+				document.getElementById("cardHolder01").appendChild(newCardContainer);
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="header-container">
@@ -136,7 +163,9 @@
 			<div class="mainRow">
 				<div class="cluster">
 					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
-					<div class="cardHolder"></div>
+					<div class="cardHolder" id="cardHolder01">
+						<script type="text/javascript">reload();</script>
+					</div>
 				</div>
 			</div>
 		</div>
