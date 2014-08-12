@@ -17,16 +17,14 @@
 		}
 
 
-		function loadNewPage() {
+		function loadNewPage(num) {
 			var newPage = document.createElement("div");
 			newPage.className = "mainPage";
 
 			for(var i=0; i<5; i++) {
-
+				var id = ((num*100)+i);
 				var newRow = document.createElement("div");
 				newRow.className = "mainRow";
-
-
 
 				var newCluster = document.createElement("div");
 				newCluster.className = "cluster";
@@ -36,21 +34,9 @@
 				newClusterHeading.innerHTML = i + ". Cluster"
 				var newCardHolder = document.createElement("div");
 				newCardHolder.className = "cardHolder";
-
-				var width = window.innerWidth;
-
-				for(var j=0; j<Math.floor((width - 248)/160); j++) {
-					var newCardContainer = document.createElement("div");
-					newCardContainer.className = "cardContainer";
-
-
-					var newCard = document.createElement("div");
-					newCard.className = "card";
-					newCard.innerHTML = j + " content";
-
-					newCardContainer.appendChild(newCard);
-					newCardHolder.appendChild(newCardContainer);
-				}
+				newCardHolder.id = "cardHolder" + id.toString();
+				alert(newCardHolder.id);
+				newCardHolder.innerHTML = "";
 
 				newCluster.appendChild(newClusterHeading);
 				newCluster.appendChild(newCardHolder);
@@ -59,6 +45,11 @@
 				newPage.appendChild(newRow);
 			}
 			document.getElementById("mainContainer").appendChild(newPage);
+
+			for(var i = 0; i < 5; i++) {
+				var id = ((num*100)+i);
+				reload("cardHolder" + id.toString());
+			}
 		}
 
 		function setTopBar() {
@@ -86,15 +77,15 @@
 
 
 		window.addEventListener('resize', reload);
-		function getWidth() {
-			var wid = document.getElementById("cardHolder01").clientWidth;
+		function getWidth(elementId) {
+			var wid = document.getElementById(elementId).clientWidth;
 			return wid;
 		}
 
 		function reload(elementId) {
 			document.getElementById(elementId).innerHTML = "";
 
-			for(i=0; i<Math.floor(getWidth()/160); i++) {
+			for(i=0; i<Math.floor(getWidth(elementId)/160); i++) {
 				newCardContainer = document.createElement("div");
 				newCardContainer.className = "cardContainer";
 
@@ -237,7 +228,10 @@
 		</div>
 		<div id="mainBeginning"></div>
 		<div id="mainContainer">
-			<script type="text/javascript">loadNewPage();</script>
+			<script type="text/javascript">loadNewPage(1);</script>
+			<script type="text/javascript">loadNewPage(2);</script>
+			<script type="text/javascript">loadNewPage(3);</script>
+
 <!-- 			<script type="text/javascript">loadNewPage();</script>
  -->
 			<!-- <div class="mainRow">
@@ -271,15 +265,15 @@
 						<script type="text/javascript">reload("cardHolder04");</script>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="mainRow">
 				<div class="cluster">
 					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
 					<div class="cardHolder" id="cardHolder05">
-						<script type="text/javascript">loadNewPage();</script>
+						<script type="text/javascript">reload("cardHolder05");</script>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		<div id="footer"></div>
 	</div>
