@@ -5,17 +5,94 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Hello World</title>
 	<script type="text/javascript">
+		window.addEventListener('scroll', setTopBar, false);
+
+		function setAutoLoad() {
+			var scroll = getNowScroll.Y;
+			var num = 2;
+
+			if((scroll/3000) == 1) {
+				loadNewPage();
+			}
+		}
+
+
+		function loadNewPage() {
+			var newPage = document.createElement("div");
+			newPage.className = "mainPage";
+
+			for(var i=0; i<5; i++) {
+
+				var newRow = document.createElement("div");
+				newRow.className = "mainRow";
+
+
+
+				var newCluster = document.createElement("div");
+				newCluster.className = "cluster";
+
+				var newClusterHeading = document.createElement("h1");
+				newClusterHeading.className = "clusterHeading";
+				newClusterHeading.innerHTML = i + ". Cluster"
+				var newCardHolder = document.createElement("div");
+				newCardHolder.className = "cardHolder";
+
+				var width = window.innerWidth;
+
+				for(var j=0; j<Math.floor((width - 248)/160); j++) {
+					var newCardContainer = document.createElement("div");
+					newCardContainer.className = "cardContainer";
+
+
+					var newCard = document.createElement("div");
+					newCard.className = "card";
+					newCard.innerHTML = j + " content";
+
+					newCardContainer.appendChild(newCard);
+					newCardHolder.appendChild(newCardContainer);
+				}
+
+				newCluster.appendChild(newClusterHeading);
+				newCluster.appendChild(newCardHolder);
+
+				newRow.appendChild(newCluster);
+				newPage.appendChild(newRow);
+			}
+			document.getElementById("mainContainer").appendChild(newPage);
+		}
+
+		function setTopBar() {
+			var scroll = getNowScroll().Y;
+
+			if(scroll>=60) {
+				document.getElementById("navContainer").className = "navContainer sticky";
+				document.getElementById("actionBarContainer").className = "actionBarContainer sticky";
+			} else {
+				document.getElementById("navContainer").className = "navContainer";
+				document.getElementById("actionBarContainer").className = "actionBarContainer";
+			}
+		}
+
+		function getNowScroll() {
+			var de = document.documentElement;
+			var b = document.body;
+			var now = {};
+
+			now.X = document.all ? (!de.scrollLeft ? b.scrollLeft : de.scrollLeft) : (window.pageXOffset ? window.pageXOffset : window.scrollX);
+			now.Y = document.all ? (!de.scrollTop ? b.scrollTop : de.scrollTop) : (window.pageYOffset ? window.pageYOffset : window.scrollY);
+
+			return now;
+		}
+
+
 		window.addEventListener('resize', reload);
 		function getWidth() {
 			var wid = document.getElementById("cardHolder01").clientWidth;
-
-			//document.getElementById("cardHolder01").innerHTML = wid;
 			return wid;
 		}
 
-		function reload() {
-
-			document.getElementById("cardHolder01").innerHTML = "";
+		function reload(elementId) {
+			document.getElementById(elementId).innerHTML = "";
 
 			for(i=0; i<Math.floor(getWidth()/160); i++) {
 				newCardContainer = document.createElement("div");
@@ -27,7 +104,7 @@
 
 				newCardContainer.appendChild(newCard);
 
-				document.getElementById("cardHolder01").appendChild(newCardContainer);
+				document.getElementById(elementId).appendChild(newCardContainer);
 			}
 		}
 	</script>
@@ -68,7 +145,7 @@
 	</div>
 
 	<div class="wrapper">
-		<div class="navContainer">
+		<div class="navContainer" id="navContainer">
 			<ul class="nav">
 				<li class="navListItem home">
 					<a href="" class="navListItemLink">
@@ -152,7 +229,7 @@
 			</ul>
 		</div>
 
-		<div id="actionBarContainer">
+		<div class="actionBarContainer" id="actionBarContainer">
 			<div id="actionBar">
 				<div id="actionBarOptionItem" class="actionBarItem">	
 				</div>
@@ -160,14 +237,49 @@
 		</div>
 		<div id="mainBeginning"></div>
 		<div id="mainContainer">
-			<div class="mainRow">
+			<script type="text/javascript">loadNewPage();</script>
+<!-- 			<script type="text/javascript">loadNewPage();</script>
+ -->
+			<!-- <div class="mainRow">
 				<div class="cluster">
 					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
 					<div class="cardHolder" id="cardHolder01">
-						<script type="text/javascript">reload();</script>
+						<script type="text/javascript">reload("cardHolder01");</script>
 					</div>
 				</div>
 			</div>
+			<div class="mainRow">
+				<div class="cluster">
+					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
+					<div class="cardHolder" id="cardHolder02">
+						<script type="text/javascript">reload("cardHolder02");</script>
+					</div>
+				</div>
+			</div>
+			<div class="mainRow">
+				<div class="cluster">
+					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
+					<div class="cardHolder" id="cardHolder03">
+						<script type="text/javascript">reload("cardHolder03");</script>
+					</div>
+				</div>
+			</div>
+			<div class="mainRow">
+				<div class="cluster">
+					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
+					<div class="cardHolder" id="cardHolder04">
+						<script type="text/javascript">reload("cardHolder04");</script>
+					</div>
+				</div>
+			</div>
+			<div class="mainRow">
+				<div class="cluster">
+					<h1 class="clusterHeading">금주의 Play 추천 게임</h1>
+					<div class="cardHolder" id="cardHolder05">
+						<script type="text/javascript">loadNewPage();</script>
+					</div>
+				</div>
+			</div> -->
 		</div>
 		<div id="footer"></div>
 	</div>
