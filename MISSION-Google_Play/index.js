@@ -1,6 +1,10 @@
-var http = require('http');
-http.createserver(function(request, response)) {
-	response.writeHead(200, {'Content-Type': 'text/plain')})
-	response.end('hello world\n');
-}).listen(80);
-console.log("server runs");
+var server = require("./server");
+var router = require("./router");
+var requestHandlers = require("./requestHandlers");
+
+var handle = {}
+handle["/"] = requestHandlers.start;
+handle["/start"] = requestHandlers.start;
+handle["/upload"] = requestHandlers.upload;
+
+server.start(router.route, handle);
