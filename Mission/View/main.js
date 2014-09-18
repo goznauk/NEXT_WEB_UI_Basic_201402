@@ -108,26 +108,3 @@ var view = (function() {
 		}
 	}
 })();
-
-var ajax = (function() {
-	var request = new XMLHttpRequest();
-	var url = "http://0.0.0.0:8000/book.json#"
-	var result;
-
-	request.open("GET", url, true);
-	request.send(null);
- 
- 	request.onreadystatechange = function() {
- 		if(request.readyState === 4 && request.status === 200) {
- 			result = request.responseText;
- 			result = JSON.parse(result);
- 			console.log("new title is " , result.title);
- 		}
- 	};
-
- 	return {
- 		get : function() {
- 			return result;
- 		}
- 	}
-})();
