@@ -1,7 +1,7 @@
 <!Doctype html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<script type="javascript" src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="javascript" src="js/main.js"></script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Hello World</title>
@@ -58,11 +58,11 @@
 			if(scroll>=60) {
 				document.getElementById("navContainer").className = "navContainer sticky";
 				document.getElementById("actionBarContainer").className = "actionBarContainer sticky";
-				document.getElementById("mainContainer").className = "mainFixed";
+				document.getElementById("mainBeginning").className = "mainBeginning_sticky";
 			} else {
 				document.getElementById("navContainer").className = "navContainer";
 				document.getElementById("actionBarContainer").className = "actionBarContainer";
-				document.getElementById("mainContainer").className = "";
+				document.getElementById("mainBeginning").className = "";
 			}
 		}
 

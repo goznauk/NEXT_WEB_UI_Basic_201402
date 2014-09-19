@@ -1,0 +1,13 @@
+{
+	"chat" :
+		[
+			{
+				"name" : "ADMIN",
+				"message" : "HI!"
+			},
+			{
+				"name" : "ADMIN",
+				"message" : "This is Chatting Server"
+			}
+		]
+}

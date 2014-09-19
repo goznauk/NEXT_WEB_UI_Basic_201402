@@ -35,6 +35,8 @@ app.use('/users', users);
 app.use('/img',express.static(path.join(__dirname, 'public/images')));
 app.use('/js',express.static(path.join(__dirname, 'public/javascripts')));
 app.use('/css',express.static(path.join(__dirname, 'public/stylesheets')));
+app.use('/data',express.static(path.join(__dirname, 'public/data')));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

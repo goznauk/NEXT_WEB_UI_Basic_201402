@@ -425,8 +425,10 @@ button {
 
 }
 
-.mainFixed {
-	top: 60;
+.mainBeginning_sticky {
+	display: block;
+	height: 48px;
+	width: 100%;
 }
 
 #mainContainer {

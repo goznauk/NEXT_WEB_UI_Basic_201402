@@ -1,0 +1,97 @@
+<!Doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Chat!</title>
+	<style>
+		body {
+			margin-top: 30px;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+
+        #footer {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        #message-input {
+        	display: inline-block;
+        	border: solid;
+        	border-width: 1px;
+        	border-color: black;
+        	width: 80%;
+        	height: 28px;
+        }
+
+        #message-button {
+        	display: inline-block;
+        	width: 10%;
+        	height: 30px;
+        }
+    </style>
+</head>
+<body>
+	<script src="http://localhost:8888/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io();
+	</script>
+	<div id="message"></div>
+    <div id="footer">
+    	<div>
+	        <input id='message-input' type='text'>
+            <button id='message-button' type='submit'> 전송 </button>
+        </div>
+    </div>
+	<script type="text/javascript">
+
+		var serverUrl = 'http://localhost:8888/chat';
+		var socket = io();
+
+		function getAjaxHttp() {
+			var xmlHttp = new XMLHttpRequest();
+
+			return xmlHttp;
+		}
+
+		//데이터 요청 보내기
+		//요건 ajax객체와 호출한 곳에서 넘겨준 콜백 메소드를 재호출해 준다.
+		//간단하게 정수타입을 반환해서 쓰면 utf8 필요없다.
+		function requestAjaxData(ajax, method, url, callback){
+		    ajax.onreadystatechange = function(){
+		        if(ajax.readyState==4 && ajax.status==200) eval(callback)(ajax);
+		    }
+		     
+		    ajax.open(method,url,true);
+		    ajax.send();
+		}
+		 
+		//ajax작업처리
+		function callAjax(method, url, callback){
+			console.log("callAjax");
+		    var ajax = getAjaxHttp();
+		    if(ajax==null){alert("ajax변수 세팅안됨");return;}
+		 
+		    requestAjaxData(ajax, method, url, callback);
+		}
+
+		callAjax("GET","/data/chat.json","callbackmethod");
+
+		//리턴값은 여기서 받고
+		function callbackmethod(ajax){
+			console.log(ajax.responseText);
+			var result = JSON.parse(ajax.responseText);
+			for(var i = 0; i < result.chat.length; i++) {
+				writeMessage(result.chat[i].name, result.chat[i].message);
+
+			}
+		}
+
+		function writeMessage(name, message) {
+			document.getElementById("message").innerHTML += '<div>' + name + " : "+ message + '</div>'; 
+        }
+
+	</script>
+</body>
