@@ -27,7 +27,7 @@ define(["./loader", "./ajax"], function(loader, ajax) {
 				for(var i = 0; i < result.weeklyMore.length; i++) {
 					//console.log(result.weeklyMore[i].title + "/" + result.weeklyMore[i].author);
 				}
-				loader.loadaCard(result);
+				loader.loadNewPage(result);
 			});
 		}
 	}

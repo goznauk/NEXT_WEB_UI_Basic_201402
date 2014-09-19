@@ -7,9 +7,7 @@ define(
 			newCard = document.createElement("div");
 			newCard.className = "card";
 			//newCard.innerHTML = id + " content";
-			console.log(data.weeklyMore[id]);
-			var html = "<h2>" + data.weeklyMore[id].title + "</h2><div><a href='<%=endPageLink%>'></a></div>";
-			html.replace("<%=title%>", data.weeklyMore[id].title).replace("<%=endPageLink%>",data.weeklyMore[id].src);
+			var html = "<h2>" + data.weeklyMore[id].title + "</h2><div><a href='" + data.weeklyMore[id].src + "'><img src='" + data.weeklyMore[id].imgSrc + "'></a></div>";
 			console.log(html);
 			newCard.innerHTML = html;
 
@@ -18,12 +16,12 @@ define(
 			return newCardContainer;
 		}
 
-		function loadRow() {
+		function loadRow(data) {
 			var newCardHolder = document.createElement("div");
 			var fragment = document.createDocumentFragment()
 			newCardHolder.className = "cardHolder";
 			for(var i=0; i<5; i++) {
-				fragment.appendChild(loadCard(i));	
+				fragment.appendChild(loadCard(i, data));	
 			}
 			newCardHolder.appendChild(fragment);
 			return newCardHolder;
@@ -33,7 +31,7 @@ define(
 			document.getElementById(clusterId).appendChild(loadRow());
 		}
 
-		function loadCluster() {
+		function loadCluster(data) {
 			// 한 줄을 가진 cluster 생성
 			
 			var id = 142
@@ -51,7 +49,7 @@ define(
 			newCardHolder.id = "cardHolder" + id.toString();
 			newCardHolder.innerHTML = "";
 
-			newCardHolder.appendChild(loadRow());
+			newCardHolder.appendChild(loadRow(data));
 
 			newCluster.appendChild(newClusterHeading);
 			newCluster.appendChild(newCardHolder);
@@ -59,12 +57,12 @@ define(
 			return newClusterContainer;
 		}
 
-		function loadPage(pageNum) {
+		function loadPage(data) {
 			var newPage = document.createElement("div");
 			newPage.className = "mainPage";
 
 			for(var i=0; i<5; i++) {
-				newPage.appendChild(loadCluster());
+				newPage.appendChild(loadCluster(data));
 			}
 			
 			return newPage;
@@ -79,13 +77,13 @@ define(
 				return loadCluster();
 			},
 
-			addNewPage : function() {
-				document.getElementById("mainContainer").appendChild(loadPage());
+			addNewPage : function(data) {
+				document.getElementById("mainContainer").appendChild(loadPage(data));
 			}, 
 
-			loadNewPage : function() {
+			loadNewPage : function(data) {
 				document.getElementById("mainContainer").innerHTML = "";
-				this.addNewPage();
+				this.addNewPage(data);
 			},
 			loadaCard : function(data) {
 				document.getElementById("mainContainer").appendChild(loadCard(1, data));

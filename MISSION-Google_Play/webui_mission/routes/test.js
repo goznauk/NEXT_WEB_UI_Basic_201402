@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET test page. */
 router.get('/', function(req, res) {
-	//res.send("lsdf");
-	res.render('main.html');
+	res.render('test.html');
 });
 
 module.exports = router;
