@@ -494,6 +494,21 @@ button {
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.card h2 {
+	display: block;
+	height: 30%;
+	font-size: 1.0em;
+	overflow: hidden;
+}
+
+.cardImgContainer {
+	position: relative;
+	height: 70%;
+	width: 100%;
+	overflow: hidden;;
+	background-color: #111;
+}
+
 @media all and (max-width: 760px) {
 	.cluster {
 		padding-left: 0px;

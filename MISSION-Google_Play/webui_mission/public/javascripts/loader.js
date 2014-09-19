@@ -7,7 +7,7 @@ define(
 			newCard = document.createElement("div");
 			newCard.className = "card";
 			//newCard.innerHTML = id + " content";
-			var html = "<h2>" + data.weeklyMore[id].title + "</h2><div><a href='" + data.weeklyMore[id].src + "'><img src='" + data.weeklyMore[id].imgSrc + "'></a></div>";
+			var html = '<a href="' + data.weeklyMore[id].src + '"><div class="cardImgContainer"><img src="' + data.weeklyMore[id].imgSrc + '"></div><h2>' + data.weeklyMore[id].title + '</h2></div></a>';
 			console.log(html);
 			newCard.innerHTML = html;
 
