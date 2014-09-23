@@ -145,7 +145,7 @@ button {
 		min-width: 270px;
 		padding-left: 30px;
 		padding-right: 30px;
-		background-color: #0FF;
+
 	}
 
 	.headerSearchBox {
@@ -239,14 +239,38 @@ button {
 	.actionBarItem {
 		display: inline-block;
 		position: absolute;
-		background-color: #0FF;
 	}
 
 	#actionBarOptionItem {
 		right: 30px;
 		width: 300px;
 		height: 48px;
-		background-color: #123;
+	}
+
+	#genreDropdown {
+		padding-top: 13px;
+		font-size: 18px;
+		width: 100px;
+		height: 35px;
+		text-align: center;
+		background-color: rgba(245, 245, 245, 0.952941);
+	}
+
+	#genreDropdownSub {
+		position: relative;
+		background-color: #000;
+		width: 200px;
+		height: 388px;
+		z-index: 100;
+
+	}
+
+	#genreDropdownList {
+
+	}
+
+	.genreDropdownListItem {
+
 	}
 }
 
@@ -470,6 +494,7 @@ button {
 	min-width: 480px;
 	padding: 5px;
 	position: relative;
+	z-index: 30;
 }
 
 .clusterButton {
@@ -479,6 +504,7 @@ button {
 	width: 80px;
 	margin-right: 100px;
 	background-color: blue;
+	z-index: 30;
 }
 
 .cardHolder.full {
@@ -506,6 +532,7 @@ button {
 	height: 100%;
 	background-color: #FFF;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	z-index: 30;
 }
 
 .card h2 {
@@ -521,6 +548,7 @@ button {
 	width: 100%;
 	overflow: hidden;;
 	background-color: #111;
+	z-index: 30;
 }
 
 @media all and (max-width: 760px) {

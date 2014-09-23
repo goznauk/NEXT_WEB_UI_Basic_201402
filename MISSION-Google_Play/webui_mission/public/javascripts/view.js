@@ -5,7 +5,8 @@ define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
 		loadNewPage : function() {
 			ajax.call('GET', '/data/book2.json', function(ajax) {
 				var result = JSON.parse(ajax.responseText);
-				loader.loadNewPage(result);
+				//loader.loadNewPage(result);
+				loader.load('Page', result);
 			});
 			window.scrollTo(0, 0);
 		},
@@ -22,5 +23,6 @@ define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
 			});
 			window.scrollTo(0, 0);
 		}
+
 	}
 });

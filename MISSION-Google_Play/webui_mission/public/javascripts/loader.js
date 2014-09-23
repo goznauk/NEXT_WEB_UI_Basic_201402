@@ -1,5 +1,8 @@
-define(['./cluster'], function(cluster) {
+define(['./cluster', './dropdown'], function (cluster, dropdown) {
+	console.log(this);
 	function loadPage(data) {
+					console.log('fn');
+
 		var newPage = document.createElement('div');
 		newPage.className = 'mainPage';
 
@@ -18,19 +21,36 @@ define(['./cluster'], function(cluster) {
 		return newPage;
 	}
 
+
 	return {
+		load : function(what, data, id) {
+			console.log(what);
+			var fn = eval('load' + what);
+			console.log(fn);
+
+			if(typeof(fn) === 'function') {
+				fn(data, id);
+			}
+		},
+
 		addNewPage : function(data) {
 			document.getElementById('mainContainer').appendChild(loadPage(data));
 		},
 
 		loadNewPage : function(data) {
+			console.log('fn');
+
 			document.getElementById('mainContainer').innerHTML = '';
-			this.addNewPage(data);
+			document.getElementById('mainContainer').appendChild(loadPage(data));
 		},
 
 		loadFullClusterPage : function(data, id) {
 			document.getElementById('mainContainer').innerHTML = '';
 			document.getElementById('mainContainer').appendChild(loadFullClusterPage(data, id));
+		},
+
+		loadGenreDropdown : function(data) {
+			document.getElementById('genreDropdownSub').appendChild(dropdown.loadDropdown(data));
 		}
 	}
 });

@@ -12,5 +12,5 @@ require(['view', 'window', 'event'], function(view, mWindow, mEvent) {
 
 
 
-    document.addEventListener('click', mEvent.onMoreButtonClicked, false);
+    document.addEventListener('click', mEvent.onButtonClicked, false);
 });
