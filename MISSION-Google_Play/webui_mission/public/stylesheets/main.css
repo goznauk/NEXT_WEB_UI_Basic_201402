@@ -461,6 +461,7 @@ button {
 }
 
 .clusterHeading {
+	display: inline-block;
 	box-sizing: border-box;
 	cursor: default;
 	font-size: 28px;
@@ -469,6 +470,19 @@ button {
 	min-width: 480px;
 	padding: 5px;
 	position: relative;
+}
+
+.clusterButton {
+	display: inline-block;
+	float: right;
+	height: 28px;
+	width: 80px;
+	margin-right: 100px;
+	background-color: blue;
+}
+
+.cardHolder.full {
+	overflow: visible;
 }
 
 .cardHolder {

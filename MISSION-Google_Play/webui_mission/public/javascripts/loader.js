@@ -1,94 +1,36 @@
-define(
-	function() {
-		function loadCard(id, data) {
-			var newCardContainer = document.createElement("div");
-			newCardContainer.className = "cardContainer";
+define(['./cluster'], function(cluster) {
+	function loadPage(data) {
+		var newPage = document.createElement('div');
+		newPage.className = 'mainPage';
 
-			newCard = document.createElement("div");
-			newCard.className = "card";
-			//newCard.innerHTML = id + " content";
-			var html = '<a href="' + data.weeklyMore[id].src + '"><div class="cardImgContainer"><img src="' + "https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w160-rw" + '"></div><h2>' + data.weeklyMore[id].title + '</h2></div></a>';
-			console.log(html);
-			newCard.innerHTML = html;
-
-
-			newCardContainer.appendChild(newCard);
-			return newCardContainer;
+		for(var i=0; i<=5; i++) {
+			newPage.appendChild(cluster.loadCluster(i*100, data));
 		}
+		
+		return newPage;
+	}
 
-		function loadRow(data) {
-			var newCardHolder = document.createElement("div");
-			var fragment = document.createDocumentFragment()
-			newCardHolder.className = "cardHolder";
-			for(var i=0; i<5; i++) {
-				fragment.appendChild(loadCard(i, data));	
-			}
-			newCardHolder.appendChild(fragment);
-			return newCardHolder;
-		}
+	function loadFullClusterPage(data, id) {
+		var newPage = document.createElement('div');
+		newPage.className = 'mainPage';
+		newPage.appendChild(cluster.loadFullCluster(parseInt(id), data));
+		
+		return newPage;
+	}
 
-		function addRow(clusterId) {
-			document.getElementById(clusterId).appendChild(loadRow());
-		}
+	return {
+		addNewPage : function(data) {
+			document.getElementById('mainContainer').appendChild(loadPage(data));
+		},
 
-		function loadCluster(data) {
-			// 한 줄을 가진 cluster 생성
-			
-			var id = 142
-			var newClusterContainer = document.createElement("div");
-			newClusterContainer.className = "clusterContainer";
+		loadNewPage : function(data) {
+			document.getElementById('mainContainer').innerHTML = '';
+			this.addNewPage(data);
+		},
 
-			var newCluster = document.createElement("div");
-			newCluster.className = "cluster";
-
-			var newClusterHeading = document.createElement("h1");
-			newClusterHeading.className = "clusterHeading";
-			newClusterHeading.innerHTML = "123" + ". Cluster"
-			var newCardHolder = document.createElement("div");
-			newCardHolder.className = "cardHolder";
-			newCardHolder.id = "cardHolder" + id.toString();
-			newCardHolder.innerHTML = "";
-
-			newCardHolder.appendChild(loadRow(data));
-
-			newCluster.appendChild(newClusterHeading);
-			newCluster.appendChild(newCardHolder);
-			newClusterContainer.appendChild(newCluster);
-			return newClusterContainer;
-		}
-
-		function loadPage(data) {
-			var newPage = document.createElement("div");
-			newPage.className = "mainPage";
-
-			for(var i=0; i<5; i++) {
-				newPage.appendChild(loadCluster(data));
-			}
-			
-			return newPage;
-		}
-
-		return {
-			addRow : function() {
-				return addRow();
-			},
-
-			loadCluster : function() {
-				return loadCluster();
-			},
-
-			addNewPage : function(data) {
-				document.getElementById("mainContainer").appendChild(loadPage(data));
-			}, 
-
-			loadNewPage : function(data) {
-				document.getElementById("mainContainer").innerHTML = "";
-				this.addNewPage(data);
-			},
-			loadaCard : function(data) {
-				document.getElementById("mainContainer").appendChild(loadCard(1, data));
-			}
-
+		loadFullClusterPage : function(data, id) {
+			document.getElementById('mainContainer').innerHTML = '';
+			document.getElementById('mainContainer').appendChild(loadFullClusterPage(data, id));
 		}
 	}
-);
+});

@@ -1,34 +1,26 @@
-define(["./loader", "./ajax"], function(loader, ajax) {
-	var pages = 0;
-
+define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
+	var pages = 1;
 
 	return {
-
-		addRow : function() {
-			return loader.addRow();
-		},
-
-		loadCluster : function() {
-			return loader.loadCluster();
-		},
-
 		loadNewPage : function() {
-			return loader.loadNewPage();
+			ajax.call('GET', '/data/book2.json', function(ajax) {
+				var result = JSON.parse(ajax.responseText);
+				loader.loadNewPage(result);
+			});
+			window.scrollTo(0, 0);
 		},
 
 		addNewPage : function() {
+			pages++;
 			return loader.addNewPage();
 		},
 
-		loadaCard : function() {
-			ajax.call("GET", "/data/book.json", function(ajax) {
-				//console.log(ajax.responseText);
+		loadFullClusterPage : function(id) {
+			ajax.call('GET', '/data/book2.json', function(ajax) {
 				var result = JSON.parse(ajax.responseText);
-				for(var i = 0; i < result.weeklyMore.length; i++) {
-					//console.log(result.weeklyMore[i].title + "/" + result.weeklyMore[i].author);
-				}
-				loader.loadNewPage(result);
+				loader.loadFullClusterPage(result, id);
 			});
+			window.scrollTo(0, 0);
 		}
 	}
 });
