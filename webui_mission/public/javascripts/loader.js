@@ -1,8 +1,5 @@
 define(['./cluster', './dropdown'], function (cluster, dropdown) {
-	console.log(this);
 	function loadPage(data) {
-					console.log('fn');
-
 		var newPage = document.createElement('div');
 		newPage.className = 'mainPage';
 
@@ -38,8 +35,6 @@ define(['./cluster', './dropdown'], function (cluster, dropdown) {
 		},
 
 		loadNewPage : function(data) {
-			console.log('fn');
-
 			document.getElementById('mainContainer').innerHTML = '';
 			document.getElementById('mainContainer').appendChild(loadPage(data));
 		},
@@ -47,10 +42,15 @@ define(['./cluster', './dropdown'], function (cluster, dropdown) {
 		loadFullClusterPage : function(data, id) {
 			document.getElementById('mainContainer').innerHTML = '';
 			document.getElementById('mainContainer').appendChild(loadFullClusterPage(data, id));
+
 		},
 
 		loadGenreDropdown : function(data) {
 			document.getElementById('genreDropdownSub').appendChild(dropdown.loadDropdown(data));
+		},
+
+		removeGenreDropdown : function() {
+			document.getElementById('genreDropdownSub').innerHTML = '';
 		}
 	}
 });

@@ -5,8 +5,8 @@ define(function() {
 
 		for(var i = 0; i < data.lists.length; i++) {
 			var newDropdownListItem = document.createElement('li');
-			newDropdownListItem.className = 'dropdownListItem';
-			newDropdownListItem.id = 'dropdownListItem' + i;
+			newDropdownListItem.className = 'genreDropdownListItem';
+			newDropdownListItem.id = 'genreDropdownListItem' + i;
 			newDropdownListItem.innerHTML = data.lists[i].listname;
 			newDropdownList.appendChild(newDropdownListItem);
 		}

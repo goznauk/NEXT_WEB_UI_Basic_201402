@@ -52,6 +52,7 @@ define(function() {
 		var newClusterButton = document.createElement('div');
 		newClusterButton.className = 'clusterButton';
 		newClusterButton.id = 'clusterButton' + id;
+		newClusterButton.innerHTML = 'More';
 
 		newCluster.appendChild(newClusterHeading);
 		newCluster.appendChild(newClusterButton);
@@ -66,6 +67,7 @@ define(function() {
 			column = 50;
 			var cluster = this.loadCluster(id, data);
 			cluster.children[0].children[2].className = 'cardHolder full';
+			cluster.children[0].children[1].innerHTML = '되돌아가기';
 			return cluster;
 		}
 	}

@@ -5,12 +5,14 @@ require(['view', 'window', 'event'], function(view, mWindow, mEvent) {
     //the module value for "helper/util".
     view.loadNewPage();
 
-    console.log(mWindow.getScroll());
-    console.log(mWindow.getSize());
-    window.addEventListener('scroll', function() { console.log(mWindow.getScroll()); }, false);
+    window.addEventListener('scroll', mEvent.onScrolled, false);
+    window.addEventListener('scroll',function() {
+
+        if((mWindow.getScroll() - mWindow.getSize()[1]) === -237)
+            {
+              //  console.log(mWindow.getScroll()+"zz");
+            }
+        }, false);
     window.addEventListener('resize', function() { console.log(mWindow.getSize()); }, false);
-
-
-
     document.addEventListener('click', mEvent.onButtonClicked, false);
 });

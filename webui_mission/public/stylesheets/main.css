@@ -83,7 +83,7 @@ button {
 
 /* Layout */
 @media all and (max-width: 760px) {
-	.headerSearchBox, .headerLogoBox, .actionBarContainer {
+	.headerSearchBox, .headerLogoBox, .actionBarContainer, .headerOptionBox {
 		display: none;
 	}
 }
@@ -256,21 +256,33 @@ button {
 		background-color: rgba(245, 245, 245, 0.952941);
 	}
 
-	#genreDropdownSub {
-		position: relative;
-		background-color: #000;
-		width: 200px;
-		height: 388px;
-		z-index: 100;
-
+	#genreDropdown:hover {
+		background-color: rgba(230, 230, 230, 0.97);
 	}
 
-	#genreDropdownList {
+	#genreDropdownSub {
+		position: relative;	
+	}
 
+
+	#genreDropdownList {
+		position: relative;
+		width: 200px;
+		height: 400px;
+		z-index: 100;
+		background-color: rgba(245, 245, 245, 0.92);
+		overflow: hidden;
 	}
 
 	.genreDropdownListItem {
+		width: 200px;
+		height: 50px;
+		font-size: 30px;
+		text-align: center;
+	}
 
+	.genreDropdownListItem:hover {
+		background-color: rgba(230, 230, 230, 0.97);
 	}
 }
 
@@ -290,7 +302,7 @@ button {
 		float: left;
 		position: absolute;
 		display: block;
-		z-index: 200;
+		z-index: 2000;
 		width: 200px;
 		height: 350px;
 		background-color: rgba(245, 245, 245, 0.952941);
@@ -461,6 +473,19 @@ button {
 
 }
 
+#mainContainerOverlay {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background: rgba(60,60,60,0.85);
+	color: white;
+	font-size: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .mainPage {
 
 }
@@ -503,8 +528,16 @@ button {
 	height: 28px;
 	width: 80px;
 	margin-right: 100px;
-	background-color: blue;
+	background-color: #4683ea;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	color: #FFF;
 	z-index: 30;
+}
+
+.clusterButton:hover {
+	background-color: #4387fd;
 }
 
 .cardHolder.full {
@@ -527,6 +560,10 @@ button {
 	height: 243px;
 }
 
+.cardContainerCover {
+
+}
+
 .card {
 	position: relative;
 	height: 100%;
@@ -540,6 +577,10 @@ button {
 	height: 30%;
 	font-size: 1.0em;
 	overflow: hidden;
+}
+
+.card:hover {
+	background-color: #EEE;
 }
 
 .cardImgContainer {
@@ -562,6 +603,14 @@ button {
 		display: inline-block;
 		min-width: 320px;
 		width: 100%;
+	}
+
+	.clusterHeading {
+		text-align: left;
+	}
+
+	.mainContainerOverlay {
+		font-size: 50px;
 	}
 }
 
