@@ -1,23 +1,27 @@
 define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
 	var pages = 1;
 
-	function getDataFromBookJson(callback) {
+	function getDataFromBookJson(callback, loadOverlay) {
 		var overlay = document.querySelector('#mainContainerOverlay');
-		overlay.style.display = 'block';
-		var iTime = new Date().getTime();
-		var now = iTime;
+		if(loadOverlay) {
+			overlay.style.display = 'block';
+			var iTime = new Date().getTime();
+			var now = iTime;
+		}
 
 		ajax.call('GET', '/data/book.json', function(ajax) {
 			var result = JSON.parse(ajax.responseText);
 			
-			//위장 시간 지연 - db처리 시간 흉내내기 
-			while((now-iTime)<Math.floor(Math.random()*500) + 1000) {
-				now = new Date().getTime();
+			if(loadOverlay) {
+				//위장 시간 지연 - db처리 시간 흉내내기 
+				while((now-iTime)<Math.floor(Math.random()*500) + 1000) {
+					now = new Date().getTime();
+				}
+				callback(result);
+				overlay.style.display = 'none';
+			} else {
+				callback(result);
 			}
-
-			callback(result);
-
-			overlay.style.display = 'none';
 		});
 	}
 
@@ -25,7 +29,7 @@ define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
 		loadNewPage : function() {
 			getDataFromBookJson(function(result) {
 				loader.loadNewPage(result);
-			});
+			}, true);
 
 			window.scrollTo(0, 0);
 		},
@@ -38,7 +42,7 @@ define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
 		loadFullClusterPage : function(id) {
 			getDataFromBookJson(function(result) {
 				loader.loadFullClusterPage(result, id);
-			});
+			}, true);
 
 			window.scrollTo(0, 0);
 		},
@@ -46,7 +50,7 @@ define(['./loader', './ajax', './window'], function(loader, ajax, myWindow) {
 		loadGenreDropdown : function() {
 			getDataFromBookJson(function(result) {
 				loader.loadGenreDropdown(result);
-			})
+			}, false);
 			
 		},
 

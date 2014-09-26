@@ -560,8 +560,8 @@ button {
 	height: 243px;
 }
 
-.cardContainerCover {
-
+.cardContainerNone {
+	display: none;
 }
 
 .card {
@@ -602,15 +602,34 @@ button {
 	.clusterHeading, .cardHolder {
 		display: inline-block;
 		min-width: 320px;
-		width: 100%;
 	}
 
 	.clusterHeading {
+		position: relative;
 		text-align: left;
+		font-size: 25px;
+		float: left;
+		overflow: hidden;
+		min-width: 0px;
+		margin-left: 40px;
 	}
 
+	.clusterButton {
+		position: relative;
+		float: right;
+
+		height: 25px;
+		margin-top: 12px;
+		margin-right: 40px;
+		width: 50px;
+	}
+	
+	.clusterHeadingContainer {
+	}
+
+
 	.mainContainerOverlay {
-		font-size: 50px;
+		font-size: 30px;
 	}
 }
 

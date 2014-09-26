@@ -14,5 +14,8 @@ require(['view', 'window', 'event'], function(view, mWindow, mEvent) {
             }
         }, false);
     window.addEventListener('resize', function() { console.log(mWindow.getSize()); }, false);
+    document.addEventListener('touchstart', mEvent.handleTouchEvent, false);
+    document.addEventListener('touchend', mEvent.handleTouchEvent, false);
     document.addEventListener('click', mEvent.onButtonClicked, false);
+
 });
