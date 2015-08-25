@@ -7,6 +7,7 @@ define(function() {
 
 		var newCardContainer = document.createElement("div");
 		newCardContainer.className = 'cardContainer';
+		newCardContainer.id = 'cardContainer' + (clusterNum * 100 + cardNum);
 
 		newCard = document.createElement('div');
 		newCard.className = 'card';
@@ -45,6 +46,9 @@ define(function() {
 		var newCluster = document.createElement('div');
 		newCluster.className = 'cluster';
 
+		var newClusterHeadingContainer = document.createElement('div');
+		newClusterHeadingContainer.className = 'clusterHeadingContainer'
+
 		var newClusterHeading = document.createElement('h1');
 		newClusterHeading.className = 'clusterHeading';
 		newClusterHeading.innerHTML = id/100 +". "+ data.lists[id/100].listname;
@@ -52,9 +56,16 @@ define(function() {
 		var newClusterButton = document.createElement('div');
 		newClusterButton.className = 'clusterButton';
 		newClusterButton.id = 'clusterButton' + id;
+		newClusterButton.innerHTML = 'More';
 
 		newCluster.appendChild(newClusterHeading);
 		newCluster.appendChild(newClusterButton);
+
+		newClusterHeadingContainer.appendChild(newClusterHeading);
+		newClusterHeadingContainer.appendChild(newClusterButton);
+
+		newCluster.appendChild(newClusterHeadingContainer);
+
 		newCluster.appendChild(loadRow(id, data));
 		newClusterContainer.appendChild(newCluster);
 		return newClusterContainer;
@@ -65,7 +76,8 @@ define(function() {
 		loadFullCluster : function(id, data) {
 			column = 50;
 			var cluster = this.loadCluster(id, data);
-			cluster.children[0].children[2].className = 'cardHolder full';
+			cluster.querySelector('.cardHolder').classList.add('full');
+			cluster.querySelector('.clusterButton').innerHTML = '되돌아가기';
 			return cluster;
 		}
 	}

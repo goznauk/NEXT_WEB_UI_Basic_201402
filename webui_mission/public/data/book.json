@@ -1,7 +1,7 @@
 {
     "lists": [
         {
-            "listname": "weeklyMore",
+            "listname": "weekly",
             "list": [
                 {
                     "title": "[세트] 제국의 꿈(전10권/완결)",
@@ -215,6 +215,195 @@
                     "src": "https://play.google.com/store/books/details/%EA%B0%95%EB%8F%99%ED%98%B8_%EC%84%B8%ED%8A%B8_%EC%A0%9C%EA%B5%AD%EC%9D%98_%EA%BF%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=WDy9AgAAQBAJ",
                     "author": "강동호",
                     "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 타메라 곤(전8권/완결)",
+                    "imgSrc": "Img/2-2.jpg",
+                    "src": "https://play.google.com/store/books/details/%ED%98%84%EB%AF%BC_%EC%84%B8%ED%8A%B8_%ED%83%80%EB%A9%94%EB%9D%BC_%EA%B3%A4_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=oRq6AgAAQBAJ",
+                    "author": "현민",
+                    "price": "₩13,440"
+                },
+                {
+                    "title": "[세트] 강호유정(전6권/완결)",
+                    "imgSrc": "Img/2-3.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%B4%EC%9E%A5_%EC%84%B8%ED%8A%B8_%EA%B0%95%ED%98%B8%EC%9C%A0%EC%A0%95_%EC%A0%846%EA%B6%8C_%EC%99%84%EA%B2%B0?id=0NO9AgAAQBAJ",
+                    "author": "무장",
+                    "price": "₩14,000"
+                },
+                {
+                    "title": "[세트] 검마(전10권/완결)",
+                    "imgSrc": "Img/2-4.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B8%80%EC%9E%91%EC%86%8C_%EC%84%B8%ED%8A%B8_%EA%B2%80%EB%A7%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=4Hy7AgAAQBAJ",
+                    "author": "글작소",
+                    "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 마협 소운강(전10권/완결)",
+                    "imgSrc": "Img/2-5.jpg",
+                    "src": "https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ",
+                    "author": "이문혁",
+                    "price": "₩16,200"
+                },
+                {
+                    "title": "[세트] 청운적하검(전7권/완결)",
+                    "imgSrc": "Img/2-6.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ",
+                    "author": "묘재",
+                    "price": "₩16,800"
+                },
+                {
+                    "title": "[세트] 서바이벌 (전8권/완결)",
+                    "imgSrc": "Img/2-7.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ",
+                    "author": "귀수",
+                    "price": "₩17,920"
+                },
+                {
+                    "title": "[세트] 제국의 꿈(전10권/완결)",
+                    "imgSrc": "Img/2-1.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B0%95%EB%8F%99%ED%98%B8_%EC%84%B8%ED%8A%B8_%EC%A0%9C%EA%B5%AD%EC%9D%98_%EA%BF%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=WDy9AgAAQBAJ",
+                    "author": "강동호",
+                    "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 타메라 곤(전8권/완결)",
+                    "imgSrc": "Img/2-2.jpg",
+                    "src": "https://play.google.com/store/books/details/%ED%98%84%EB%AF%BC_%EC%84%B8%ED%8A%B8_%ED%83%80%EB%A9%94%EB%9D%BC_%EA%B3%A4_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=oRq6AgAAQBAJ",
+                    "author": "현민",
+                    "price": "₩13,440"
+                },
+                {
+                    "title": "[세트] 강호유정(전6권/완결)",
+                    "imgSrc": "Img/2-3.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%B4%EC%9E%A5_%EC%84%B8%ED%8A%B8_%EA%B0%95%ED%98%B8%EC%9C%A0%EC%A0%95_%EC%A0%846%EA%B6%8C_%EC%99%84%EA%B2%B0?id=0NO9AgAAQBAJ",
+                    "author": "무장",
+                    "price": "₩14,000"
+                },
+                {
+                    "title": "[세트] 타메라 곤(전8권/완결)",
+                    "imgSrc": "Img/2-2.jpg",
+                    "src": "https://play.google.com/store/books/details/%ED%98%84%EB%AF%BC_%EC%84%B8%ED%8A%B8_%ED%83%80%EB%A9%94%EB%9D%BC_%EA%B3%A4_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=oRq6AgAAQBAJ",
+                    "author": "현민",
+                    "price": "₩13,440"
+                },
+                {
+                    "title": "[세트] 강호유정(전6권/완결)",
+                    "imgSrc": "Img/2-3.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%B4%EC%9E%A5_%EC%84%B8%ED%8A%B8_%EA%B0%95%ED%98%B8%EC%9C%A0%EC%A0%95_%EC%A0%846%EA%B6%8C_%EC%99%84%EA%B2%B0?id=0NO9AgAAQBAJ",
+                    "author": "무장",
+                    "price": "₩14,000"
+                },
+                {
+                    "title": "[세트] 검마(전10권/완결)",
+                    "imgSrc": "Img/2-4.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B8%80%EC%9E%91%EC%86%8C_%EC%84%B8%ED%8A%B8_%EA%B2%80%EB%A7%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=4Hy7AgAAQBAJ",
+                    "author": "글작소",
+                    "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 마협 소운강(전10권/완결)",
+                    "imgSrc": "Img/2-5.jpg",
+                    "src": "https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ",
+                    "author": "이문혁",
+                    "price": "₩16,200"
+                },
+                {
+                    "title": "[세트] 청운적하검(전7권/완결)",
+                    "imgSrc": "Img/2-6.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ",
+                    "author": "묘재",
+                    "price": "₩16,800"
+                },
+                {
+                    "title": "[세트] 서바이벌 (전8권/완결)",
+                    "imgSrc": "Img/2-7.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ",
+                    "author": "귀수",
+                    "price": "₩17,920"
+                },
+                {
+                    "title": "[세트] 제국의 꿈(전10권/완결)",
+                    "imgSrc": "Img/2-1.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B0%95%EB%8F%99%ED%98%B8_%EC%84%B8%ED%8A%B8_%EC%A0%9C%EA%B5%AD%EC%9D%98_%EA%BF%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=WDy9AgAAQBAJ",
+                    "author": "강동호",
+                    "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 타메라 곤(전8권/완결)",
+                    "imgSrc": "Img/2-2.jpg",
+                    "src": "https://play.google.com/store/books/details/%ED%98%84%EB%AF%BC_%EC%84%B8%ED%8A%B8_%ED%83%80%EB%A9%94%EB%9D%BC_%EA%B3%A4_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=oRq6AgAAQBAJ",
+                    "author": "현민",
+                    "price": "₩13,440"
+                },
+                {
+                    "title": "[세트] 강호유정(전6권/완결)",
+                    "imgSrc": "Img/2-3.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%B4%EC%9E%A5_%EC%84%B8%ED%8A%B8_%EA%B0%95%ED%98%B8%EC%9C%A0%EC%A0%95_%EC%A0%846%EA%B6%8C_%EC%99%84%EA%B2%B0?id=0NO9AgAAQBAJ",
+                    "author": "무장",
+                    "price": "₩14,000"
+                },
+                {
+                    "title": "[세트] 타메라 곤(전8권/완결)",
+                    "imgSrc": "Img/2-2.jpg",
+                    "src": "https://play.google.com/store/books/details/%ED%98%84%EB%AF%BC_%EC%84%B8%ED%8A%B8_%ED%83%80%EB%A9%94%EB%9D%BC_%EA%B3%A4_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=oRq6AgAAQBAJ",
+                    "author": "현민",
+                    "price": "₩13,440"
+                },
+                {
+                    "title": "[세트] 강호유정(전6권/완결)",
+                    "imgSrc": "Img/2-3.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%B4%EC%9E%A5_%EC%84%B8%ED%8A%B8_%EA%B0%95%ED%98%B8%EC%9C%A0%EC%A0%95_%EC%A0%846%EA%B6%8C_%EC%99%84%EA%B2%B0?id=0NO9AgAAQBAJ",
+                    "author": "무장",
+                    "price": "₩14,000"
+                },
+                {
+                    "title": "[세트] 검마(전10권/완결)",
+                    "imgSrc": "Img/2-4.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B8%80%EC%9E%91%EC%86%8C_%EC%84%B8%ED%8A%B8_%EA%B2%80%EB%A7%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=4Hy7AgAAQBAJ",
+                    "author": "글작소",
+                    "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 마협 소운강(전10권/완결)",
+                    "imgSrc": "Img/2-5.jpg",
+                    "src": "https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ",
+                    "author": "이문혁",
+                    "price": "₩16,200"
+                },
+                {
+                    "title": "[세트] 청운적하검(전7권/완결)",
+                    "imgSrc": "Img/2-6.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ",
+                    "author": "묘재",
+                    "price": "₩16,800"
+                },
+                {
+                    "title": "[세트] 서바이벌 (전8권/완결)",
+                    "imgSrc": "Img/2-7.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ",
+                    "author": "귀수",
+                    "price": "₩17,920"
+                },
+                {
+                    "title": "[세트] 제국의 꿈(전10권/완결)",
+                    "imgSrc": "Img/2-1.jpg",
+                    "src": "https://play.google.com/store/books/details/%EA%B0%95%EB%8F%99%ED%98%B8_%EC%84%B8%ED%8A%B8_%EC%A0%9C%EA%B5%AD%EC%9D%98_%EA%BF%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=WDy9AgAAQBAJ",
+                    "author": "강동호",
+                    "price": "₩17,280"
+                },
+                {
+                    "title": "[세트] 타메라 곤(전8권/완결)",
+                    "imgSrc": "Img/2-2.jpg",
+                    "src": "https://play.google.com/store/books/details/%ED%98%84%EB%AF%BC_%EC%84%B8%ED%8A%B8_%ED%83%80%EB%A9%94%EB%9D%BC_%EA%B3%A4_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=oRq6AgAAQBAJ",
+                    "author": "현민",
+                    "price": "₩13,440"
+                },
+                {
+                    "title": "[세트] 강호유정(전6권/완결)",
+                    "imgSrc": "Img/2-3.jpg",
+                    "src": "https://play.google.com/store/books/details/%EB%AC%B4%EC%9E%A5_%EC%84%B8%ED%8A%B8_%EA%B0%95%ED%98%B8%EC%9C%A0%EC%A0%95_%EC%A0%846%EA%B6%8C_%EC%99%84%EA%B2%B0?id=0NO9AgAAQBAJ",
+                    "author": "무장",
+                    "price": "₩14,000"
                 },
                 {
                     "title": "[세트] 타메라 곤(전8권/완결)",

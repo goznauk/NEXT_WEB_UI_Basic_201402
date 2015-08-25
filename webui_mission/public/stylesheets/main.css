@@ -83,7 +83,7 @@ button {
 
 /* Layout */
 @media all and (max-width: 760px) {
-	.headerSearchBox, .headerLogoBox, .actionBarContainer {
+	.headerSearchBox, .headerLogoBox, .actionBarContainer, .headerOptionBox {
 		display: none;
 	}
 }
@@ -145,7 +145,7 @@ button {
 		min-width: 270px;
 		padding-left: 30px;
 		padding-right: 30px;
-		background-color: #0FF;
+
 	}
 
 	.headerSearchBox {
@@ -239,14 +239,50 @@ button {
 	.actionBarItem {
 		display: inline-block;
 		position: absolute;
-		background-color: #0FF;
 	}
 
 	#actionBarOptionItem {
 		right: 30px;
 		width: 300px;
 		height: 48px;
-		background-color: #123;
+	}
+
+	#genreDropdown {
+		padding-top: 13px;
+		font-size: 18px;
+		width: 100px;
+		height: 35px;
+		text-align: center;
+		background-color: rgba(245, 245, 245, 0.952941);
+	}
+
+	#genreDropdown:hover {
+		background-color: rgba(230, 230, 230, 0.97);
+	}
+
+	#genreDropdownSub {
+		position: relative;	
+	}
+
+
+	#genreDropdownList {
+		position: relative;
+		width: 200px;
+		height: 400px;
+		z-index: 100;
+		background-color: rgba(245, 245, 245, 0.92);
+		overflow: hidden;
+	}
+
+	.genreDropdownListItem {
+		width: 200px;
+		height: 50px;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.genreDropdownListItem:hover {
+		background-color: rgba(230, 230, 230, 0.97);
 	}
 }
 
@@ -266,7 +302,7 @@ button {
 		float: left;
 		position: absolute;
 		display: block;
-		z-index: 200;
+		z-index: 2000;
 		width: 200px;
 		height: 350px;
 		background-color: rgba(245, 245, 245, 0.952941);
@@ -437,6 +473,19 @@ button {
 
 }
 
+#mainContainerOverlay {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background: rgba(60,60,60,0.85);
+	color: white;
+	font-size: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .mainPage {
 
 }
@@ -470,6 +519,7 @@ button {
 	min-width: 480px;
 	padding: 5px;
 	position: relative;
+	z-index: 30;
 }
 
 .clusterButton {
@@ -478,7 +528,16 @@ button {
 	height: 28px;
 	width: 80px;
 	margin-right: 100px;
-	background-color: blue;
+	background-color: #4683ea;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	color: #FFF;
+	z-index: 30;
+}
+
+.clusterButton:hover {
+	background-color: #4387fd;
 }
 
 .cardHolder.full {
@@ -501,11 +560,16 @@ button {
 	height: 243px;
 }
 
+.cardContainerNone {
+	display: none;
+}
+
 .card {
 	position: relative;
 	height: 100%;
 	background-color: #FFF;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	z-index: 30;
 }
 
 .card h2 {
@@ -515,12 +579,17 @@ button {
 	overflow: hidden;
 }
 
+.card:hover {
+	background-color: #EEE;
+}
+
 .cardImgContainer {
 	position: relative;
 	height: 70%;
 	width: 100%;
 	overflow: hidden;;
 	background-color: #111;
+	z-index: 30;
 }
 
 @media all and (max-width: 760px) {
@@ -533,7 +602,34 @@ button {
 	.clusterHeading, .cardHolder {
 		display: inline-block;
 		min-width: 320px;
-		width: 100%;
+	}
+
+	.clusterHeading {
+		position: relative;
+		text-align: left;
+		font-size: 25px;
+		float: left;
+		overflow: hidden;
+		min-width: 0px;
+		margin-left: 40px;
+	}
+
+	.clusterButton {
+		position: relative;
+		float: right;
+
+		height: 25px;
+		margin-top: 12px;
+		margin-right: 40px;
+		width: 50px;
+	}
+	
+	.clusterHeadingContainer {
+	}
+
+
+	.mainContainerOverlay {
+		font-size: 30px;
 	}
 }
 
